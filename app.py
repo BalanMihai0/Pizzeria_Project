@@ -33,11 +33,7 @@ def setup():
     board.set_pin_mode_dht(DHTPIN, sensor_type=11, differential=0.05, callback=Measure)
     board.set_pin_mode_analog_input(LDRPIN, callback=Measure_light, differential=10)
 
-# number of measurements
-
-
 @app.route("/")
-
 
 @app.route("/asdfg", methods=['POST']) 
   
