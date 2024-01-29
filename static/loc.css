@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    font-family: 'Poppins',sans-serif;
+}
+
+.navbar{
+    /* width: 2890px;
+    height: 93px;
+    left: -12px;
+    top: 0px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    
+}
+.logo{
+    /* position: absolute; */
+    width: 150px;
+    height: 100px;
+    top: 8px;
+}
+
+.navbar .menu-button {
+    display: none;
+    width: 50px;
+    height: 50px;
+}
+
+@media screen and (max-width: 810px) {
+    .navbar ul {
+        position: absolute;
+        top: 80px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: black;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .menu-button {
+        display: block;
+    }
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    font-weight: bold;
+    /* left: 980px;
+    top: -55px;  */
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background:red;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.cart{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    /* left: 2790px;
+    top: -100px; */
+    cursor:pointer;
+}
+#demobox{
+    width: 497px;
+    height: 322px;
+    left: 350px;
+    top: 639px;
+    background: black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px ;
+}

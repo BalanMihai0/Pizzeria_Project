@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Order - Mario & Luigi Pizzeria</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="{{url_for('static', filename='Mario.js')}}" async></script>
+  <!--Google Font-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!--Stylesheet-->
+  <link rel="stylesheet" href="{{url_for('static', filename='order.css')}}" />
+</head>
+
+<body>
+  <div class="navbar">
+    <img src="{{url_for('static', filename='images/logo.png')}}" class="logo" />
+    <button class="menu-button">...</button>
+    <ul>
+      <li style><a href="/">Home</a></li>
+      <li><a href="/order">Menu</a></li>
+      <li><a href="/locations">Location</a></li>
+      <li><a href="/offers">Offers</a></li>
+      <li><a href="/reservation">Contact</a></li>
+      <li><a href="/login">LogIn</a></li>
+    </ul>
+    <a href="/shopping_cart">
+      <img src="{{url_for('static', filename='images/shopping_cart.png')}}" class="cart" /></a>
+  </div>
+  <div class="menu">
+    <div class="heading">
+      <h1>Mario & Luigi Pizzeria</h1>
+      <h3>&mdash; MENU &mdash;</h3>
+    </div>
+    <div class="food-items">
+      <img src="{{url_for('static', filename='images/margarita.jpeg')}}" />
+      <div class="details">
+        <div class="details-sub">
+          <h5>Margarita</h5>
+          <h5 class="price">€10</h5>
+        </div>
+        <p>
+          Italian flour, whole tomato sauce, mozzarella, tomatoes, pesto
+          sauce, oregano
+        </p>
+        
+        <form action="/ordermarg" method="POST">
+          <input type="hidden" value="Margarita" name="Margarita">
+          <input class="btn btn-primary shop-item-button" type="submit" name="Margarita" value="Purchase">
+          </input>
+        </form>
+      </div>
+    </div>
+
+    <div class="food-items">
+      <img src="{{url_for('static', filename='images/Marrakech.jpeg')}}" />
+      <div class="details">
+        <div class="details-sub">
+          <h5>Marrakech</h5>
+          <h5 class="price">€13</h5>
+        </div>
+        <p> 
+          Italian flour, truffle sauce, mozzarella, duck fillet (sous-style),
+          figs, brie, almonds, pomegranate sauce.
+        </p>
+        <form action="/ordermarak" method="POST">
+          <input type="hidden" value="Marrakech" name="Marrakech">
+          <input class="btn btn-primary shop-item-button" type="submit" name="Marrakech" value="Purchase">
+          </input>
+        </form>
+      </div>
+    </div>
+
+    <div class="food-items">
+      <img src="{{url_for('static', filename='images/pepperoni.jpeg')}}" />
+      <div class="details">
+        <div class="details-sub">
+          <h5>Pepperoni</h5>
+          <h5 class="price">€10</h5>
+        </div>
+        <p>
+          Italian flour, mozzarella, whole tomato sauce, real Italian
+          pepperoni, hot pepper, capers, oregano
+        </p>
+        <form action="/orderpep" method="POST">
+          <input type="hidden" value="Pepperoni" name="Pepperoni">
+          <input class="btn btn-primary shop-item-button" type="submit" name="Pepperoni" value="Purchase">
+          </input>
+        </form>
+      </div>
+    </div>
+
+    <div class="food-items">
+      <img src="{{url_for('static', filename='images/salami.jpeg')}}" />
+      <div class="details">
+        <div class="details-sub">
+          <h5>Salami</h5>
+          <h5 class="price">€9</h5>
+        </div>
+        <p>
+          Italian flour, mozzarella, whole tomato sauce, premium salami,
+          oregano
+        </p>
+        <form action="/ordersal" method="POST">
+          <input type="hidden" value="Salami" name="Salami">
+          <input class="btn btn-primary shop-item-button" type="submit" name="Salami" value="Purchase">
+          </input>
+        </form>
+      </div>
+    </div>
+
+    <div class="food-items">
+      <img src="{{url_for('static', filename='images/proshuto.jpeg')}}" />
+      <div class="details">
+        <div class="details-sub">
+          <h5>Prosciutto</h5>
+          <h5 class="price">€15</h5>
+        </div>
+        <p>
+          Italian flour, whole tomato sauce, mozzarella, prossuitto, arugula,
+          cherries sun-dried tomato, capers, oregano, parmesan
+        </p>
+        <form action="/orderprosc" method="POST">
+          <input type="hidden" value="Prosciutto" name="Prosciutto">
+          <input class="btn btn-primary shop-item-button" type="submit" name="Prosciutto" value="Purchase">
+          </input>
+        </form>
+      </div>
+    </div>
+
+    <div class="food-items">
+      <img src="{{url_for('static', filename='images/bavarian.png')}}" />
+      <div class="details">
+        <div class="details-sub">
+          <h5>Bavarian</h5>
+          <h5 class="price">€12</h5>
+        </div>
+        <p>
+          Italian flour, whole tomato sauce, mozzarella, pepperoni, hunting
+          sausages, bell pepper, olives, Pesto sauce, oregano
+        </p>
+        <form action="/orderbav" method="POST">
+          <input type="hidden" value="Bavarian" name="Bavarian">
+          <input class="btn btn-primary shop-item-button" type="submit" name="Bavarian" value="Purchase">
+          </input>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

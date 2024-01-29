@@ -1,0 +1,165 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    font-family: 'Poppins',sans-serif;
+}
+
+.navbar{
+    /* width: 2890px;
+    height: 93px;
+    left: -12px;
+    top: 0px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    
+}
+.logo{
+    /* position: absolute; */
+    width: 231px;
+    height: 80px;
+    top: 8px;
+}
+
+.navbar .menu-button {
+    display: none;
+    width: 50px;
+    height: 50px;
+}
+
+@media screen and (max-width: 810px) {
+    .navbar ul {
+        position: absolute;
+        top: 80px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: black;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .menu-button {
+        display: block;
+    }
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    font-weight: bold;
+    /* left: 980px;
+    top: -55px;  */
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background:red;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.cart{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    /* left: 2790px;
+    top: -100px; */
+    cursor:pointer;
+}
+.banner{
+    width: 100%;
+    height: 100vh; 
+    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('/static/images/bckground.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.content{
+    width: 100%;
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color:whitesmoke;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+    font-weight: bold;
+}
+.content p{
+    margin: 30px auto;
+    font-weight: 100;
+    line-height: 25px;
+    font-size: 20px;
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin : 20px 10px;
+    font-weight: bolder;
+    border: 2px solid white;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    position:relative;
+    overflow: hidden;
+    font-size: large
+}
+span{
+    background: black;
+    height: 100%;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+   
+
+}
+button:hover span{
+     width: 100%;
+     
+}
+button:hover {
+    border: none;
+    color: black;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
+a:hover {
+    transition: 0,5s;
+    color:  white;
+}
+
+
+
+

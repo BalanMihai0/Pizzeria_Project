@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='contact.css')}}"
+    />
+    <title>Reserve - Mario & Luigi Pizzeria</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <img
+        src="{{url_for('static', filename='images/logo.png')}}"
+        class="logo"
+      />
+      <button class="menu-button">...</button>
+      <ul>
+        <li style><a href="/">Home</a></li>
+        <li><a href="/order">Menu</a></li>
+        <li><a href="/locations">Location</a></li>
+        <li><a href="/offers">Offers</a></li>
+        <li><a href="/reservation">Contact</a></li>
+        <li><a href="/login">LogIn</a></li>
+      </ul>
+      <a href="/shopping_cart">
+        <img
+          src="{{url_for('static', filename='images/shopping_cart.png')}}"
+          class="cart"
+      /></a>
+    </div>
+    <div class="container">
+      <form onsubmit="sendEmail(); reset(); return false">
+        <h3>Make A Reservation</h3>
+        <input type="text" id="name" placeholder="Your name" required />
+        <input type="email" id="email" placeholder="Email id" required />
+        <input type="text" id="Phone" placeholder="Phone no." required />
+        <textarea
+          id="message"
+          rows="4"
+          placeholder="How can we help you ?"
+        ></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail() {
+        Email.send({
+          Host: "smtp.gmail.com",
+          Username: "emmanuel.wilsonhidayat@gmail.com",
+          Password: "Chr!stopher05",
+          To: "emmanuel.wilsonhidayat@gmail.com",
+          From: document.getElementById("email").value,
+          Subject: "Reservation",
+          Body:
+            "Name " +
+            document.getElementById("name") +
+            "<br> Email :" +
+            document.getElementById("email").value +
+            "<br> Phone :" +
+            document.getElementById("phone").value +
+            "<br> Message :" +
+            document.getElementById("message").value,
+        }).then((message) => alert("You just made a reservation !"));
+      }
+    </script>
+  </body>
+</html>

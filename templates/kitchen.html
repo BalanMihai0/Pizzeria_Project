@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static', filename='styles_kitchen.css')}}" />
+    <link href='https://fonts.googleapis.com/css?family=Hansief' rel='stylesheet' />
+    <title>Chef's interface</title>
+</head>
+
+<body>
+    <div id="button1" align="center">
+        <button class="button" style="width:1200px;height:100px;">
+            <h1 style="font-size: 34px"> Orders</h1>
+        </button>
+        <div id="textbox" class="textbox" align="left">
+            <h1 align="center"> <u>DELIVERY</u></h1>
+            {% for i in range(0,ids|length) %}
+            {%if ids[i] == 'new'%}
+            <h1>===================================================</h1><br>
+            <h1 align = "center"><b>{{ordernumber}}</b></h1>
+            <form action="/deleteline" method="POST">
+                <input type="hidden" value={{linenumber[i]}} name="linenumber">
+                <input class="btn btn-primary shop-item-button" type="submit" name="linenumber" value="Order Done">
+                </input>
+            </form>
+            {%else%}
+            <h1>{{ids[i]}}, {{names[i]}}</h1><br>
+            <h2>{{ingredientss[i]}}</h2><br><br>
+            
+            {%endif%}
+            {%endfor%}
+        </div>
+        <div id="textbox_right" class="textbox_right" align="left">
+            <h1 align="center"> <u>IN RESTAURANT</u></h1>
+
+        </div>
+</body>
+
+</html>

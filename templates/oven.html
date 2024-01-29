@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="refresh" content="1">-->
+    <title>Smart oven</title>
+    <!--<link rel="stylesheet" href="../styles_data.css" type="text/css">-->
+    <link rel="stylesheet" href="{{url_for('.static', filename='main.css')}}">
+
+    <script>
+        var mins = 10;
+        var secs = mins * 60;
+        var degrees = 30;
+        function countdown() {
+            setTimeout('Decrement()', 60);
+        }
+        function Decrement() {
+            if (document.getElementById) {
+                minutes = document.getElementById("minutes");
+                seconds = document.getElementById("seconds");
+                if (seconds < 59) {
+                    seconds.value = secs;
+                }
+                else {
+                    minutes.value = getminutes();
+                    seconds.value = getseconds();
+                }
+                if (mins < 1) {
+                    minutes.style.color = "red";
+                    seconds.style.color = "red";
+                }
+                if (mins < 0) {
+                    alert('time up');
+                    minutes.value = 0;
+                    seconds.value = 0;
+                }
+                else {
+                    secs--;
+                    setTimeout('Decrement()', 1000);
+                }
+            }
+        }
+
+        function getminutes() {
+            //minutes is seconds divided by 60, rounded down
+            mins = Math.floor(secs / 60);
+            return mins;
+        }
+        function getseconds() {
+            return secs - Math.round(mins * 60);
+        }
+        function getdegrees(){
+            return (Math.floor(Math.random() *220) + 195);
+        }
+    </script>
+</head>
+
+<body onload="countdown();">
+    <div class="navbar">
+        <img
+          src="{{url_for('static', filename='images/logo.png')}}"
+          class="logo"
+        />
+        <button class="menu-button">...</button>
+        <ul>
+          <li style><a href="/">Home</a></li>
+          <li><a href="/order">Menu</a></li>
+          <li><a href="/locations">Location</a></li>
+          <li><a href="/offers">Offers</a></li>
+          <li><a href="/reservation">Contact</a></li>
+          <li><a href="/login">LogIn</a></li>
+          <li><a href="/oven">Oven</a></li>
+        </ul>
+        <a href="/shopping_cart">
+          <img
+            src="{{url_for('static', filename='images/shopping_cart.png')}}"
+            class="cart"
+        /></a>
+    </div>
+
+    <div align="center">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 style="color:white; font-size: 64;">Inside temperature: {{choice}}</h1> 
+        <h1 style="color:white; font-size: 64;">Time Left :</h1>
+        </h1>
+        <input id="minutes" type="text" style="width: 70px;
+             border: none; font-size: 64px; 
+            font-weight: bold; color: black;">
+        <font size="5"> :
+        </font>
+        <input id="seconds" type="text" style="width: 70px;
+                        border: none; font-size: 64px;
+                        font-weight: bold; color: black;">
+        <br>
+        <button class="button button1m" style="width:500px;height:70px;">Start Again</button>
+    </div>
+
+
+</body>
+
+</html>

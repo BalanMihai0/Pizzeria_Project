@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{{url_for('.static', filename='styles_data.css')}}">
+    <title>Payment - Mario & Luigi Pizzeria info</title>
+</head>
+
+<body>
+    <div class="banner"></div>>
+        <div class="content" ></div>>
+            <div id="bg" align="center"></div>
+            <form>
+                <div class="form-field">
+                    <input type="cardnumber" name="cardnumber" placeholder="Card Number" required />
+                </div>
+                <div class="form-field">
+                    <input type="expdate" name="expdate" placeholder="Expiration Date" required />
+                </div>
+                <div class="form-field">
+                    <input type="cvv" name="cvv" placeholder="CVV" required />
+                </div>
+
+                <div class="form-field">
+                    <button class="btn" type="submit"><a href="/cashier">Pay</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

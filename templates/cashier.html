@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static', filename='styles_kitchen.css')}}" />
+    <link href='https://fonts.googleapis.com/css?family=Hansief' rel='stylesheet' />
+    <title>Cashier's interface</title>
+</head>
+
+<body>
+    <div id="button1" align="center">
+        <button class="button" style="width:1200px;height:100px;">
+            <h1 style="font-size: 34px"> Orders</h1>
+        </button>
+        <div id="textbox" class="textbox" align="center">
+            <h1 align="center"> <u>DELIVERY</u></h1>
+
+            {% for i in range(0,ids|length) %}
+            {% if ids[i] == 'new' %}
+            <h1> Total: {{total}}</h1>
+            <h1>===================================================</h1>
+            <form action="/payment" method="POST">
+                <input type="hidden" value={{price}} name="payment">
+                <input class="btn btn-primary shop-item-button" type="submit" name="payment" value="Go to payment">
+                </input>
+             </form>
+             {% else %}
+            <h1>{{ids[i]}}, {{names[i]}}</h1><br>
+            <h1>{{price[i]}}euros</h1><br><br>
+            
+            {% endif %}
+            {% endfor %}
+        </div>
+</body>
+
+</html>

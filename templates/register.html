@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Log In- Mario and Luigi's Pizzeria</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <html lang="en">
+
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  </head>
+
+  <body>
+    <div class="navbar">
+      <img
+        src="{{url_for('static', filename='images/logo.png')}}"
+        class="logo"
+      />
+      <button class="menu-button">...</button>
+      <ul>
+        <li style><a href="/">Home</a></li>
+        <li><a href="/order">Menu</a></li>
+        <li><a href="/locations">Location</a></li>
+        <li><a href="/offers">Offers</a></li>
+        <li><a href="/reservation">Contact</a></li>
+        <li><a href="/login">LogIn</a></li>
+      </ul>
+      <a href="/shopping_cart">
+        <img
+          src="{{url_for('static', filename='images/shopping_cart.png')}}"
+          class="cart"
+      /></a>
+    </div>
+    <div id="login-form-wrap">
+      <h2>Sign Up</h2>
+      <form id="login-form" action="/register" name="register" method="POST">
+        <p>
+        <input type="text" id="username" name="username" placeholder="Username" required><i class="validation"><span></span><span></span></i>
+        </p>
+        <p>
+        <input type="email" id="email" name="email" placeholder="Email Address" required><i class="validation"><span></span><span></span></i>
+        </p>
+        <p>
+        <input type="phonenumber" id="phonenumber" name="phonenumber" placeholder="Phone number" required><i class="validation"><span></span><span></span></i>
+        </p>
+        <p>
+        <input type="password" id="password" name="password" placeholder="Password" required><i class="validation"><span></span><span></span></i>
+        </p>
+        <p>
+        <input type="password" id="rpassword" name="rpassword" placeholder="Repeat Password" required><i class="validation"><span></span><span></span></i>
+        </p>
+        <p>
+        <input type="submit" id="register" value="Register">
+        </p>
+      </form>
+    </div>
+        
+
+</body>
+
+</html>

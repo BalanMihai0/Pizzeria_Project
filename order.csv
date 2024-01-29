@@ -1,0 +1,25 @@
+linenumber,id,Pizza,Ingredients,Price
+2,new,new,new,0
+1,4,Margarita,Italian flour; whole tomato sauce; mozzarella; tomatoes; pestosauce; oregano,10
+2,5,Marrakech,Italian flour; truffle sauce; mozzarella; duck fillet (sous-style); figs; brie; almonds; pomegranate sauce.,13
+3,6,Pepperoni,Italian flour; mozzarella; whole tomato sauce; real Italian pepperoni; hot pepper; capers; oregano,10
+4,7,Bavarian,Italian flour; whole tomato sauce; mozzarella; pepperoni; huntingsausages; bell pepper; olives; Pesto sauce; oregano,12
+
+
+3,new,new,new,0
+3,1,Margarita,Italian flour; whole tomato sauce; mozzarella; tomatoes; pestosauce; oregano,10
+4,2,Margarita,Italian flour; whole tomato sauce; mozzarella; tomatoes; pestosauce; oregano,10
+3,new,new,new,0
+3,1,Margarita,Italian flour; whole tomato sauce; mozzarella; tomatoes; pestosauce; oregano,10
+4,2,Marrakech,Italian flour; truffle sauce; mozzarella; duck fillet (sous-style); figs; brie; almonds; pomegranate sauce.,13
+5,3,Marrakech,Italian flour; truffle sauce; mozzarella; duck fillet (sous-style); figs; brie; almonds; pomegranate sauce.,13
+3,new,new,new,0
+3,1,Marrakech,Italian flour; truffle sauce; mozzarella; duck fillet (sous-style); figs; brie; almonds; pomegranate sauce.,13
+4,2,Pepperoni,Italian flour; mozzarella; whole tomato sauce; real Italian pepperoni; hot pepper; capers; oregano,10
+5,3,Pepperoni,Italian flour; mozzarella; whole tomato sauce; real Italian pepperoni; hot pepper; capers; oregano,10
+6,4,Margarita,Italian flour; whole tomato sauce; mozzarella; tomatoes; pestosauce; oregano,10
+7,5,Margarita,Italian flour; whole tomato sauce; mozzarella; tomatoes; pestosauce; oregano,10
+8,6,Margarita,Italian flour; whole tomato sauce; mozzarella; tomatoes; pestosauce; oregano,10
+3,new,new,new,0
+3,1,Pepperoni,Italian flour; mozzarella; whole tomato sauce; real Italian pepperoni; hot pepper; capers; oregano,10
+4,2,Pepperoni,Italian flour; mozzarella; whole tomato sauce; real Italian pepperoni; hot pepper; capers; oregano,10
